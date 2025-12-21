@@ -23,7 +23,7 @@ const aiTools: AITool[] = [
     icon: '💬',
     color: 'from-emerald-500 to-teal-600',
     features: ['Natural conversations', 'Code assistance', 'Writing help'],
-    pricing: 'Free / $20/mo'
+    pricing: 'Free / ₹1,660/mo'
   },
   {
     id: '2',
@@ -33,7 +33,7 @@ const aiTools: AITool[] = [
     icon: '🎨',
     color: 'from-purple-500 to-pink-600',
     features: ['Art generation', 'Style control', 'High resolution'],
-    pricing: 'From $10/mo'
+    pricing: 'From ₹830/mo'
   },
   {
     id: '3',
@@ -43,7 +43,7 @@ const aiTools: AITool[] = [
     icon: '🚀',
     color: 'from-blue-500 to-cyan-600',
     features: ['Code completion', 'Multi-language', 'Context-aware'],
-    pricing: '$10/mo'
+    pricing: '₹830/mo'
   },
   {
     id: '4',
@@ -53,7 +53,7 @@ const aiTools: AITool[] = [
     icon: '🎬',
     color: 'from-orange-500 to-red-600',
     features: ['Video editing', 'Gen-2 models', 'Real-time effects'],
-    pricing: 'From $12/mo'
+    pricing: 'From ₹996/mo'
   },
   {
     id: '5',
@@ -63,7 +63,7 @@ const aiTools: AITool[] = [
     icon: '✍️',
     color: 'from-violet-500 to-purple-600',
     features: ['Blog posts', 'Ad copy', 'SEO optimization'],
-    pricing: 'From $39/mo'
+    pricing: 'From ₹3,237/mo'
   },
   {
     id: '6',
@@ -73,7 +73,7 @@ const aiTools: AITool[] = [
     icon: '🎙️',
     color: 'from-indigo-500 to-blue-600',
     features: ['Voice cloning', 'Text-to-speech', 'Multi-lingual'],
-    pricing: 'Free / From $5/mo'
+    pricing: 'Free / From ₹415/mo'
   },
   {
     id: '7',
@@ -83,7 +83,7 @@ const aiTools: AITool[] = [
     icon: '📝',
     color: 'from-gray-600 to-gray-800',
     features: ['Writing assistant', 'Summarization', 'Translation'],
-    pricing: '$10/mo'
+    pricing: '₹830/mo'
   },
   {
     id: '8',
@@ -93,7 +93,7 @@ const aiTools: AITool[] = [
     icon: '🎥',
     color: 'from-pink-500 to-rose-600',
     features: ['AI avatars', '120+ languages', 'Custom branding'],
-    pricing: 'From $30/mo'
+    pricing: 'From ₹2,490/mo'
   },
   {
     id: '9',
@@ -103,7 +103,7 @@ const aiTools: AITool[] = [
     icon: '🔥',
     color: 'from-amber-500 to-orange-600',
     features: ['Meeting transcription', 'AI notes', 'CRM integration'],
-    pricing: 'Free / From $10/mo'
+    pricing: 'Free / From ₹830/mo'
   },
   {
     id: '10',
@@ -123,7 +123,7 @@ const aiTools: AITool[] = [
     icon: '✅',
     color: 'from-green-500 to-emerald-600',
     features: ['Grammar check', 'Tone detection', 'Plagiarism check'],
-    pricing: 'Free / From $12/mo'
+    pricing: 'Free / From ₹996/mo'
   },
   {
     id: '12',
@@ -133,7 +133,7 @@ const aiTools: AITool[] = [
     icon: '🔍',
     color: 'from-sky-500 to-blue-600',
     features: ['Cited answers', 'Follow-up questions', 'Real-time data'],
-    pricing: 'Free / $20/mo'
+    pricing: 'Free / ₹1,660/mo'
   }
 ];
 

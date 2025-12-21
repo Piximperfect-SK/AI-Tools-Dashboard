@@ -51,7 +51,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
                 rotate: isHovered ? 5 : 0,
               }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="text-4xl"
+              className="text-white text-4xl"
             >
               {tool.icon}
             </motion.div>
@@ -62,10 +62,10 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsFavorite(!isFavorite)}
-                className={`p-2 rounded-lg transition-colors ${
+className={`p-2 rounded-lg transition-colors ${
                   isFavorite 
                     ? 'bg-yellow-500/20 text-yellow-400' 
-                    : 'bg-slate-700/50 text-slate-400 hover:text-yellow-400'
+                    : 'bg-slate-700/50 text-white'
                 }`}
               >
                 <Star
@@ -78,7 +78,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
               <motion.button
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-white transition-colors"
+                className="p-2 rounded-lg bg-slate-700/50 text-white transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
               </motion.button>
@@ -87,7 +87,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
 
           {/* Title & Category */}
           <div className="mb-3">
-            <h3 className="text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all">
+            <h3 className="text-white mb-1">
               {tool.name}
             </h3>
             <div className="flex items-center gap-2">
@@ -97,7 +97,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
               <motion.div
                 animate={{ x: isHovered ? [0, 3, 0] : 0 }}
                 transition={{ repeat: isHovered ? Infinity : 0, duration: 1 }}
-                className="flex items-center gap-1 text-emerald-400 text-xs"
+                className="flex items-center gap-1 text-white text-xs"
               >
                 <TrendingUp className="w-3 h-3" />
               </motion.div>
@@ -105,7 +105,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
           </div>
 
           {/* ✅ Description — FIXED (only change) */}
-          <p className="text-white/90 hover:text-white text-sm mb-4 line-clamp-2 transition-colors">
+          <p className="text-white text-sm mb-4 line-clamp-2">
             {tool.description}
           </p>
 
@@ -119,7 +119,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -10 }}
                   transition={{ delay: idx * 0.1 }}
-                  className="flex items-center gap-2 text-xs text-slate-300"
+                  className="flex items-center gap-2 text-xs text-white"
                 >
                   <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${tool.color}`} />
                   {feature}
@@ -130,7 +130,7 @@ export function AIToolCard({ tool, index }: AIToolCardProps) {
 
           {/* Footer */}
           <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <span className="text-xs text-slate-400">{tool.pricing}</span>
+            <span className="text-xs text-white">{tool.pricing}</span>
             
             <motion.button
               whileHover={{ scale: 1.05 }}
