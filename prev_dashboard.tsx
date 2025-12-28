@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { AIToolCard } from './AIToolCard';
 import { motion } from 'motion/react';
 import { Sparkles, Search } from 'lucide-react';
@@ -20,7 +20,7 @@ const aiTools: AITool[] = [
     name: 'ChatGPT',
     description: 'Advanced conversational AI for natural language understanding and generation.',
     category: 'Text Generation',
-    icon: '💬',
+    icon: '≡ƒÆ¼',
     color: 'from-emerald-500 to-teal-600',
     features: ['Natural conversations', 'Code assistance', 'Writing help'],
     pricing: 'Free / $20/mo'
@@ -30,7 +30,7 @@ const aiTools: AITool[] = [
     name: 'Midjourney',
     description: 'Create stunning, artistic images from text descriptions with AI.',
     category: 'Image Generation',
-    icon: '🎨',
+    icon: '≡ƒÄ¿',
     color: 'from-purple-500 to-pink-600',
     features: ['Art generation', 'Style control', 'High resolution'],
     pricing: 'From $10/mo'
@@ -40,7 +40,7 @@ const aiTools: AITool[] = [
     name: 'GitHub Copilot',
     description: 'AI pair programmer that helps you write code faster and smarter.',
     category: 'Code Assistant',
-    icon: '💻',
+    icon: '≡ƒÜÇ',
     color: 'from-blue-500 to-cyan-600',
     features: ['Code completion', 'Multi-language', 'Context-aware'],
     pricing: '$10/mo'
@@ -50,7 +50,7 @@ const aiTools: AITool[] = [
     name: 'Runway ML',
     description: 'Professional video editing and generation powered by AI technology.',
     category: 'Video Generation',
-    icon: '🎬',
+    icon: '≡ƒÄ¼',
     color: 'from-orange-500 to-red-600',
     features: ['Video editing', 'Gen-2 models', 'Real-time effects'],
     pricing: 'From $12/mo'
@@ -60,7 +60,7 @@ const aiTools: AITool[] = [
     name: 'Jasper AI',
     description: 'AI content platform for marketing teams and content creators.',
     category: 'Content Creation',
-    icon: '✍️',
+    icon: 'Γ£ì∩╕Å',
     color: 'from-violet-500 to-purple-600',
     features: ['Blog posts', 'Ad copy', 'SEO optimization'],
     pricing: 'From $39/mo'
@@ -70,7 +70,7 @@ const aiTools: AITool[] = [
     name: 'ElevenLabs',
     description: 'Generate realistic voices and clone speech with advanced AI.',
     category: 'Voice & Audio',
-    icon: '🎙️',
+    icon: '≡ƒÄÖ∩╕Å',
     color: 'from-indigo-500 to-blue-600',
     features: ['Voice cloning', 'Text-to-speech', 'Multi-lingual'],
     pricing: 'Free / From $5/mo'
@@ -80,7 +80,7 @@ const aiTools: AITool[] = [
     name: 'Notion AI',
     description: 'Integrated AI assistant for note-taking and knowledge management.',
     category: 'Productivity',
-    icon: '📝',
+    icon: '≡ƒô¥',
     color: 'from-gray-600 to-gray-800',
     features: ['Writing assistant', 'Summarization', 'Translation'],
     pricing: '$10/mo'
@@ -90,7 +90,7 @@ const aiTools: AITool[] = [
     name: 'Synthesia',
     description: 'Create AI-generated videos with virtual presenters in minutes.',
     category: 'Video Generation',
-    icon: '🎥',
+    icon: '≡ƒÄÑ',
     color: 'from-pink-500 to-rose-600',
     features: ['AI avatars', '120+ languages', 'Custom branding'],
     pricing: 'From $30/mo'
@@ -100,7 +100,7 @@ const aiTools: AITool[] = [
     name: 'Fireflies.ai',
     description: 'Record, transcribe, and analyze your voice conversations automatically.',
     category: 'Voice & Audio',
-    icon: '🔥',
+    icon: '≡ƒöÑ',
     color: 'from-amber-500 to-orange-600',
     features: ['Meeting transcription', 'AI notes', 'CRM integration'],
     pricing: 'Free / From $10/mo'
@@ -110,7 +110,7 @@ const aiTools: AITool[] = [
     name: 'Stability AI',
     description: 'Open-source image generation with Stable Diffusion technology.',
     category: 'Image Generation',
-    icon: '🖼️',
+    icon: '≡ƒû╝∩╕Å',
     color: 'from-teal-500 to-emerald-600',
     features: ['Open source', 'Customizable', 'High quality'],
     pricing: 'Free / Credits'
@@ -120,7 +120,7 @@ const aiTools: AITool[] = [
     name: 'Grammarly',
     description: 'AI-powered writing assistant for grammar, style, and tone.',
     category: 'Content Creation',
-    icon: '✏️',
+    icon: 'Γ£à',
     color: 'from-green-500 to-emerald-600',
     features: ['Grammar check', 'Tone detection', 'Plagiarism check'],
     pricing: 'Free / From $12/mo'
@@ -130,7 +130,7 @@ const aiTools: AITool[] = [
     name: 'Perplexity AI',
     description: 'AI-powered search engine that provides accurate answers with sources.',
     category: 'Search & Research',
-    icon: '🔍',
+    icon: '≡ƒöì',
     color: 'from-sky-500 to-blue-600',
     features: ['Cited answers', 'Follow-up questions', 'Real-time data'],
     pricing: 'Free / $20/mo'
@@ -145,16 +145,15 @@ export function AIToolsDashboard() {
 
   const filteredTools = aiTools.filter(tool => {
     const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-    const matchesSearch =
-      tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          tool.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       {/* Header */}
-      <motion.header
+      <motion.header 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="border-b border-white/10 backdrop-blur-xl bg-slate-900/50 sticky top-0 z-50"
@@ -164,7 +163,7 @@ export function AIToolsDashboard() {
             <div className="flex items-center gap-3">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               >
                 <Sparkles className="w-8 h-8 text-violet-400" />
               </motion.div>
@@ -182,7 +181,7 @@ export function AIToolsDashboard() {
               type="text"
               placeholder="Search AI tools..."
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50 transition-all"
             />
           </div>
@@ -192,7 +191,7 @@ export function AIToolsDashboard() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Category Filter */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -221,7 +220,7 @@ export function AIToolsDashboard() {
         </motion.div>
 
         {/* Tools Grid */}
-        <motion.div
+        <motion.div 
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
